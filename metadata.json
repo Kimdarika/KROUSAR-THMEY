@@ -1,0 +1,6 @@
+{
+  "name": "Krousar Thmey",
+  "description": "The first Cambodian foundation for underprivileged children, providing education for deaf or blind children, child welfare, and cultural preservation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Atkinson Hyperlegible", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "IBM Plex Sans", sans-serif;
+  
+  --color-primary-custom: #001e40;
+  --color-angkor-blue: #003366;
+  --color-royal-gold: #808000;
+  --color-hope-green: #2E7D32;
+  --color-earth-clay: #8B4513;
+  --color-surface-cream: #F9F7F2;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-high: #eae8e3;
+  --color-on-surface-variant: #43474f;
+  --color-on-surface: #1b1c19;
+}
+
+/* Base custom styles to enhance visual polish */
+body {
+  background-color: var(--color-surface-cream);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+}
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+/* Custom scrollbars for high fidelity */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
