@@ -218,12 +218,9 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
             {/* Quick Action Buttons & Mobile Trigger */}
             <div className="flex items-center gap-2.5">
 
-              <button
-                onClick={() => handleLinkClick("get-books")}
-                className="hidden sm:inline-flex bg-royal-gold hover:bg-royal-gold/90 text-white font-headline font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-xs border border-transparent cursor-pointer"
-              >
-                Order Bookstore
-              </button>
+              <div className="hidden sm:flex items-center bg-surface-cream border border-surface-container-high rounded-xl px-2 py-1.5">
+                <div id="google_translate_element"></div>
+              </div>
 
       
               <button
@@ -320,12 +317,9 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
             Donate Now (Secure)
           </button>
 
-          <button
-            onClick={() => handleLinkClick("get-books")}
-            className="w-full bg-royal-gold hover:bg-royal-gold/90 text-white font-headline font-extrabold text-xs py-3 rounded-xl text-center block shadow-xs"
-          >
-            Order Books (Fundraising)
-          </button>
+          <div className="w-full bg-surface-cream border border-surface-container-high rounded-xl py-2 px-3 text-center text-xs text-on-surface-variant font-headline font-semibold">
+            🌐 Language: EN / KH
+          </div>
         </div>
       )}
     </div>
