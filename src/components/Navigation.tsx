@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { 
-  Users, 
-  BookOpen, 
-  HeartHandshake, 
-  Newspaper, 
-  FileBarChart, 
-  Globe, 
-  Menu, 
-  X, 
-  ChevronDown, 
+import {
+  Users,
+  BookOpen,
+  HeartHandshake,
+  Newspaper,
+  FileBarChart,
+  Globe,
+  Menu,
+  X,
+  ChevronDown,
   ChevronRight,
   Home
 } from "lucide-react";
@@ -125,16 +125,16 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
       <header className="w-full bg-white/95 backdrop-blur-md border-b border-surface-container-high transition-all">
         <div className="w-full px-4 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center h-20">
-            
+
             {/* Logo & Seal Brand */}
-            <button 
+            <button
               onClick={() => handleLinkClick("who-presentation")}
               className="flex items-center gap-3.5 text-left group"
             >
               <div className="w-11 h-11 bg-surface-cream rounded-xl p-1.5 border border-surface-container-high shadow-xs group-hover:border-royal-gold transition-colors flex items-center justify-center">
-                <img 
-                  src={IMAGES.cambodianRoyalSeal} 
-                  alt="Krousar Thmey Logo Seal" 
+                <img
+                  // src={IMAGES.cambodianRoyalSeal}
+                  alt="Krousar Thmey Logo Seal"
                   className="w-full h-full object-contain filter group-hover:brightness-105"
                   referrerPolicy="no-referrer"
                 />
@@ -160,11 +160,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                     <button
                       key={category.title}
                       onClick={() => handleLinkClick(category.id || "")}
-                      className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all flex items-center gap-1.5 ${
-                        isActive
-                          ? "bg-angkor-blue text-white shadow-xs"
-                          : "text-on-surface-variant hover:text-primary-custom hover:bg-surface-cream"
-                      }`}
+                      className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all flex items-center gap-1.5 ${isActive
+                        ? "bg-angkor-blue text-white shadow-xs"
+                        : "text-on-surface-variant hover:text-primary-custom hover:bg-surface-cream"
+                        }`}
                     >
                       <category.icon className="w-4 h-4" />
                       <span>{category.title}</span>
@@ -180,11 +179,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button
-                      className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-                        isActive
-                          ? "bg-angkor-blue/10 text-primary-custom border border-angkor-blue/10"
-                          : "text-on-surface-variant hover:text-primary-custom hover:bg-surface-cream border border-transparent"
-                      }`}
+                      className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all flex items-center gap-1.5 cursor-pointer ${isActive
+                        ? "bg-angkor-blue/10 text-primary-custom border border-angkor-blue/10"
+                        : "text-on-surface-variant hover:text-primary-custom hover:bg-surface-cream border border-transparent"
+                        }`}
                     >
                       <category.icon className="w-4 h-4 text-royal-gold shrink-0" />
                       <span>{category.title}</span>
@@ -201,11 +199,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                           <button
                             key={item.id}
                             onClick={() => handleLinkClick(item.id)}
-                            className={`w-full px-4 py-3 text-left text-xs font-headline font-semibold flex items-center justify-between transition-colors ${
-                              activeTab === item.id
-                                ? "bg-royal-gold/15 text-primary-custom border-l-4 border-royal-gold font-bold"
-                                : "text-on-surface-variant hover:bg-surface-cream hover:text-primary-custom"
-                            }`}
+                            className={`w-full px-4 py-3 text-left text-xs font-headline font-semibold flex items-center justify-between transition-colors ${activeTab === item.id
+                              ? "bg-royal-gold/15 text-primary-custom border-l-4 border-royal-gold font-bold"
+                              : "text-on-surface-variant hover:bg-surface-cream hover:text-primary-custom"
+                              }`}
                           >
                             <span>{item.label}</span>
                             <ChevronRight className="w-3 h-3 opacity-30" />
@@ -220,18 +217,22 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
 
             {/* Quick Action Buttons & Mobile Trigger */}
             <div className="flex items-center gap-2.5">
-              <button
-                onClick={() => handleLinkClick("get-donate")}
-                className="hidden sm:inline-flex bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-headline font-extrabold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95 cursor-pointer"
-              >
-                Donate Now
-              </button>
+
               <button
                 onClick={() => handleLinkClick("get-books")}
                 className="hidden sm:inline-flex bg-royal-gold hover:bg-royal-gold/90 text-white font-headline font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-xs border border-transparent cursor-pointer"
               >
                 Order Bookstore
               </button>
+
+      
+              <button
+                onClick={() => handleLinkClick("get-donate")}
+                className="hidden sm:inline-flex bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-headline font-extrabold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg active:scale-95 cursor-pointer"
+              >
+                Donate Now
+              </button>
+
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -263,11 +264,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                   <button
                     key={category.title}
                     onClick={() => handleLinkClick(category.id || "")}
-                    className={`w-full p-3 rounded-xl font-headline font-bold text-xs flex items-center gap-3 ${
-                      isActive
-                        ? "bg-angkor-blue text-white"
-                        : "bg-surface-cream text-on-surface-variant hover:text-primary-custom border border-surface-container-high"
-                    }`}
+                    className={`w-full p-3 rounded-xl font-headline font-bold text-xs flex items-center gap-3 ${isActive
+                      ? "bg-angkor-blue text-white"
+                      : "bg-surface-cream text-on-surface-variant hover:text-primary-custom border border-surface-container-high"
+                      }`}
                   >
                     <category.icon className="w-4 h-4" />
                     <span>{category.title}</span>
@@ -279,11 +279,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                 <div key={category.title} className="space-y-1">
                   <button
                     onClick={() => setMobileExpandedCat(isExpanded ? null : category.title)}
-                    className={`w-full p-3 rounded-xl font-headline font-bold text-xs flex items-center justify-between ${
-                      isActive
-                        ? "bg-angkor-blue/15 text-primary-custom"
-                        : "bg-surface-cream text-on-surface-variant border border-surface-container-high"
-                    }`}
+                    className={`w-full p-3 rounded-xl font-headline font-bold text-xs flex items-center justify-between ${isActive
+                      ? "bg-angkor-blue/15 text-primary-custom"
+                      : "bg-surface-cream text-on-surface-variant border border-surface-container-high"
+                      }`}
                   >
                     <div className="flex items-center gap-3">
                       <category.icon className="w-4 h-4" />
@@ -298,11 +297,10 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
                         <button
                           key={item.id}
                           onClick={() => handleLinkClick(item.id)}
-                          className={`w-full p-2.5 rounded-lg text-left text-xs font-headline font-semibold flex justify-between items-center ${
-                            activeTab === item.id
-                              ? "bg-royal-gold/15 text-primary-custom font-bold border-l-2 border-royal-gold"
-                              : "text-on-surface-variant hover:bg-surface-cream"
-                          }`}
+                          className={`w-full p-2.5 rounded-lg text-left text-xs font-headline font-semibold flex justify-between items-center ${activeTab === item.id
+                            ? "bg-royal-gold/15 text-primary-custom font-bold border-l-2 border-royal-gold"
+                            : "text-on-surface-variant hover:bg-surface-cream"
+                            }`}
                         >
                           <span>{item.label}</span>
                           <ChevronRight className="w-3 h-3 opacity-40" />
@@ -342,7 +340,7 @@ interface SidebarProps {
 
 export function PageSidebar({ activeTab, onTabChange }: SidebarProps) {
   // Find which category the current activeTab belongs to
-  const activeCategory = NAVIGATION_CATEGORIES.find((cat) => 
+  const activeCategory = NAVIGATION_CATEGORIES.find((cat) =>
     cat.items.some((item) => item.id === activeTab)
   );
 
@@ -367,11 +365,10 @@ export function PageSidebar({ activeTab, onTabChange }: SidebarProps) {
                 onTabChange(item.id);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={`w-full p-2.5 rounded-lg text-left text-xs font-headline font-semibold flex justify-between items-center transition-colors ${
-                isSelected
-                  ? "bg-primary-custom text-white font-bold"
-                  : "text-on-surface-variant hover:bg-surface-cream hover:text-primary-custom"
-              }`}
+              className={`w-full p-2.5 rounded-lg text-left text-xs font-headline font-semibold flex justify-between items-center transition-colors ${isSelected
+                ? "bg-primary-custom text-white font-bold"
+                : "text-on-surface-variant hover:bg-surface-cream hover:text-primary-custom"
+                }`}
             >
               <span>{item.label}</span>
               <ChevronRight className={`w-3 h-3 ${isSelected ? "text-royal-gold" : "opacity-30"}`} />
