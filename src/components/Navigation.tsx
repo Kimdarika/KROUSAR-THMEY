@@ -125,27 +125,19 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
       <header className="w-full bg-white/95 backdrop-blur-md border-b border-surface-container-high transition-all">
         <div className="w-full px-4 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center h-20">
-
-            {/* Logo & Seal Brand */}
-            <button
+            
+            {/* Logo with Krousar Thmey Image */}
+            <button 
               onClick={() => handleLinkClick("who-presentation")}
               className="flex items-center gap-3.5 text-left group"
             >
-              <div className="w-11 h-11 bg-surface-cream rounded-xl p-1.5 border border-surface-container-high shadow-xs group-hover:border-royal-gold transition-colors flex items-center justify-center">
-                <img
-                  // src={IMAGES.cambodianRoyalSeal}
-                  alt="Krousar Thmey Logo Seal"
-                  className="w-full h-full object-contain filter group-hover:brightness-105"
+              <div className="h-12 w-auto flex items-center">
+                <img 
+                  src="https://krousar-thmey.org/wp-content/uploads/2017/07/logo-kt-horizontal-downsize.png"
+                  alt="Krousar Thmey Logo" 
+                  className="h-full w-auto object-contain filter group-hover:brightness-105 transition-all duration-300"
                   referrerPolicy="no-referrer"
                 />
-              </div>
-              <div>
-                <span className="block font-headline font-black text-sm tracking-wide text-primary-custom group-hover:text-angkor-blue uppercase">
-                  KROUSAR THMEY
-                </span>
-                <span className="block text-[9px] uppercase tracking-widest font-extrabold text-royal-gold leading-none mt-1">
-                  គ្រួសារថ្មី • Est. 1991
-                </span>
               </div>
             </button>
 
